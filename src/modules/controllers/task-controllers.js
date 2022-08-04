@@ -11,9 +11,7 @@ const getAllTasks = async (req, res) => {
 
 const createNewTask = async (req, res) => {
   try {
-    const text = req.body.text;
-    const cost = req.body.cost;
-    const date = req.body.date;
+    const { text, date, cost } = req.body
     const task = new Task({ text, cost, date });
     const result = await task.save();
     res.status(200).send(result);
