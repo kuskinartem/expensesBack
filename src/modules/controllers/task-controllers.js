@@ -54,7 +54,7 @@ const changeTaskText = async (req, res) => {
 const changeTaskCost = async (req, res) => {
   try {
     const cost = req.body.cost;
-    const { _id } = req.params;
+    const _id = req.params._id;
 
     const task = await Task.findOneAndUpdate(
       { _id },

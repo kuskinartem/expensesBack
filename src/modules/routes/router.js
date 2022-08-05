@@ -22,7 +22,7 @@ router.get('/tasks', getAllTasks);
 router.post('/tasks',creatValidator, createNewTask);
 router.delete('/task/:_id', deleteTask);
 router.delete('/tasks', deleteAllTask);
-router.patch('/task/:_id', changeTextValidator, changeTaskText);
+router.patch('/task/:_id/text', changeTextValidator, changeTaskText);
 router.patch('/task/:_id/cost', changeCostValidator, changeTaskCost),
 router.patch('/task/:_id/date', changeDateValidator, changeTaskDate)
 

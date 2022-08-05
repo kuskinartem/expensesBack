@@ -21,7 +21,7 @@ const creatValidator = [
 
   const changeCostValidator = [
     check('_id').notEmpty().isLength({ min: 1 }).isString(),
-    check('cost').notEmpty().isLength({ min: 1 }).isNumeric(),
+    check('cost').notEmpty().isLength({ min: 1 }),
     handleValidationError,
   ];
 
