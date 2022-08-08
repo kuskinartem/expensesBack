@@ -9,7 +9,7 @@ const handleValidationError = (req, res, next) => {
 const creatValidator = [
     check('text').notEmpty().isLength({ min: 1 }).isString(),
     check('cost').notEmpty().isLength({ min: 1 }).isNumeric(),
-    check('date').notEmpty().isLength({ min: 1 }).isString(),
+    check('date').notEmpty().isLength({ min: 1 }),
     handleValidationError,
   ];
 
@@ -27,7 +27,7 @@ const creatValidator = [
 
   const changeDateValidator = [
     check('_id').notEmpty().isLength({ min: 1 }).isString(),
-    check('date').notEmpty().isLength({ min: 1 }).isString(),
+    check('date').notEmpty().isLength({ min: 1 }),
     handleValidationError,
   ];
 
